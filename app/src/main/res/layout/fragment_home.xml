@@ -373,7 +373,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
-                android:paddingHorizontal="16dp" />
+                android:paddingHorizontal="16dp"
+                tools:listitem="@layout/viewholder_pop_list"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
         </LinearLayout>
     </ScrollView>

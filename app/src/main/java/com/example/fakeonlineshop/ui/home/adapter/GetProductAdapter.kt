@@ -5,6 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fakeonlineshop.databinding.ViewholderPopListBinding
 import com.example.fakeonlineshop.models.GetProduct
+import com.squareup.picasso.Picasso
 
 class GetProductAdapter(private val list: List<GetProduct>) :
     RecyclerView.Adapter<GetProductAdapter.VH>() {
@@ -13,6 +14,10 @@ class GetProductAdapter(private val list: List<GetProduct>) :
         RecyclerView.ViewHolder(listBinding.root) {
         fun onBind(getProduct: GetProduct, position: Int) {
             listBinding.titleItemTxt.text = getProduct.title
+            listBinding.feeTxt.text = getProduct.price.toString()
+            listBinding.scoreTxt.text = getProduct.rating.toString()
+            Picasso.get().load(getProduct.image).into(listBinding.pic)
+
         }
     }
 

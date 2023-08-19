@@ -10,4 +10,9 @@
         android:name="com.example.fakeonlineshop.ui.home.adapter.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.example.fakeonlineshop.ui.CardFragment"
+        android:label="fragment_card"
+        tools:layout="@layout/fragment_card" />
 </navigation>
