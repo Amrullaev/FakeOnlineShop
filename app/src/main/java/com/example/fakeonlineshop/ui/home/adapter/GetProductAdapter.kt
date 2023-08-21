@@ -15,7 +15,7 @@ class GetProductAdapter(private val list: List<GetProduct>) :
         fun onBind(getProduct: GetProduct, position: Int) {
             listBinding.titleItemTxt.text = getProduct.title
             listBinding.feeTxt.text = getProduct.price.toString()
-            listBinding.scoreTxt.text = getProduct.rating.toString()
+            listBinding.scoreTxt.text = getProduct.rating.rate.toString()
             Picasso.get().load(getProduct.image).into(listBinding.pic)
 
         }

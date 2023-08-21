@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.fakeonlineshop.models.GetProduct
+import com.example.fakeonlineshop.models.GetProductItem
 import com.example.fakeonlineshop.repository.ApiRepository
 import com.example.fakeonlineshop.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,8 +15,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(private val apiRepository: ApiRepository) : ViewModel() {
-    private val _responseProducts = MutableLiveData<Resource<GetProduct>>()
-    val getProduct: LiveData<Resource<GetProduct>> get() = _responseProducts
+    private val _responseProducts = MutableLiveData<Resource<GetProductItem>>()
+    val getProduct: LiveData<Resource<GetProductItem>> get() = _responseProducts
 
     fun getProducts() {
         _responseProducts.postValue(Resource.loading(null))
